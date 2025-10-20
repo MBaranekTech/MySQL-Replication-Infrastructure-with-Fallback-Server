@@ -50,6 +50,12 @@ If `DB02` fails, `DB01` can quickly take over by assuming its IP and stopping re
 ### 1. Create MySQL users on both replicas server for connection and check if you LOG turned ON - on both replicas!
 
 ```
+MySQL user
+CREATE USER 'root'@'192.168.2.X' IDENTIFIED BY 'yoursecretpassword';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.2.X' WITH GRANT OPTION;
+FLUSH PRIVILEGES; - Re-sync what’s in RAM with what’s on disk.
+
+
 nano /etc/mysql/mysql.conf.d/mysqld.cnf
 Add lines under [mysqld] section
 binlog-format           = ROW
