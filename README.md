@@ -72,7 +72,7 @@ Log to MySQL and check if LOG is turned ON
 mysql -u root -p -h IP Address
 SHOW VARIABLES LIKE 'log_bin';
 
-On DB02 check -> SHOW MASTER STATUS; -it will show you current position for sync DB after DUMP and LOAD. NOTED IT!!!
+On DB02 check -> SHOW MASTER STATUS; - it will show you current position for sync DB before DUMP. NOTED IT! Important for resync DB after LOAD on replica server.
 ```
 ### 2. On Server DBO1 - replica of replica create in /opt/backup-db folder
 ```
