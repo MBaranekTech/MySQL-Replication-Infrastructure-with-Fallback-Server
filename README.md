@@ -143,6 +143,10 @@ Ensure time sync between all DB servers. <br>
 Monitor replication lag via Seconds_Behind_Master. <br>
 Keep repl_user with least privileges. <br>
 
+**IMPORTANT <br>**
+Via HEIDISQL - export DB and USER from first replica and import it via HeidiSQL to replica 2 and FLUSH PRIVILEGES; <br>
+You will face with errors like -> Error 'Operation ALTER USER failed for 'replicator'@'192.168.2.x'' on query.
+
 🧑‍💻 Author
 System Administrator — passionate about automation, reliability, and infrastructure resiliency.
 
