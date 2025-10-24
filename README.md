@@ -147,6 +147,10 @@ Keep repl_user with least privileges. <br>
 Via HEIDISQL - export DB and USER from first replica and import it via HeidiSQL to replica 2 and FLUSH PRIVILEGES; <br>
 You will face with errors like -> Error 'Operation ALTER USER failed for 'replicator'@'192.168.2.x'' on query.
 
+**Tuning TIP <br>**
+If you are facing with high CPU utilization - tune in [mysqld] parameter innodb_buffer_pool_size = XG <br>
+Reduces Disk I/O, Faster Writes (with Adaptive Flushing), Better Index Usage <br>
+
 🧑‍💻 Author
 System Administrator — passionate about automation, reliability, and infrastructure resiliency.
 
