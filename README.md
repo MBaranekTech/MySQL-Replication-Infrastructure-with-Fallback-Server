@@ -143,15 +143,22 @@ Ensure time sync between all DB servers. <br>
 Monitor replication lag via Seconds_Behind_Master. <br>
 Keep repl_user with least privileges. <br>
 
+---
+
 **IMPORTANT <br>**
 Via HEIDISQL - export DB and USER from first replica and import it via HeidiSQL to replica 2 and FLUSH PRIVILEGES; <br>
 You will face with errors like -> Error 'Operation ALTER USER failed for 'replicator'@'192.168.2.x'' on query.
 
+---
 **Tuning TIP <br>**
-If you are facing with high CPU utilization - tune in [mysqld] parameter innodb_buffer_pool_size = XG <br>
-Reduces Disk I/O, Faster Writes (with Adaptive Flushing), Better Index Usage <br>
+If you are facing with high CPU utilization - tune in [**mysqld**] parameter **innodb_buffer_pool_size = XG** <br>
+Fewer disk reads, Faster query responses, Lower CPU and I/O load
+More consistent performance under heavy traffic <br>
 
 “Keep more of my database in RAM, so you don’t have to read from disk as often.” :) 
+
+---
+
 
 🧑‍💻 Author
 System Administrator — passionate about automation, reliability, and infrastructure resiliency.
