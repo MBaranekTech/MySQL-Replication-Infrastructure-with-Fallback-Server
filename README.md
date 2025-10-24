@@ -151,6 +151,8 @@ You will face with errors like -> Error 'Operation ALTER USER failed for 'replic
 If you are facing with high CPU utilization - tune in [mysqld] parameter innodb_buffer_pool_size = XG <br>
 Reduces Disk I/O, Faster Writes (with Adaptive Flushing), Better Index Usage <br>
 
+“Keep more of my database in RAM, so you don’t have to read from disk as often.” :) 
+
 🧑‍💻 Author
 System Administrator — passionate about automation, reliability, and infrastructure resiliency.
 
